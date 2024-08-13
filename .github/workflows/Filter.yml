@@ -1,0 +1,15 @@
+name: Filter 
+ 
+on:
+ pull_request:
+   types:
+    - opened
+    - syncronised
+   branches:
+     - master
+
+jobs:
+ echo_filter:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo "Run wheneever there is a open pull request"
