@@ -1,4 +1,5 @@
 name: 06 - context
+run-name: "runner context ${{runner.os}}"
  
  
 on:
