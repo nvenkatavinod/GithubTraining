@@ -28,6 +28,8 @@ jobs:
       echo "Workflow: ${{github.workflow}}"
       echo "Run Id: ${{github.run_id}}"
       echo "Run number: ${{github.run_number}}"
+      echo  "ENV variable is: ${{env.MY_OVERWRITTEN_VAR}}"
+      
    - name: Retreieve Variables
      env:
         MY_WORKFLOW_VAR: "step"
