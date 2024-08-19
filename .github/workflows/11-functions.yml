@@ -7,6 +7,17 @@ jobs:
  echo-functions:
   runs-on: ubuntu-latest
   steps:
+   - name: Print PR title
+     run: echo "The title of the PR to the screen."
+   - name: Get PR labels
+     id: pr-labels
+     env: 
+         PR_LABEL_LIST: ${{ toJson(github.event.pull_request.labels.*.name) }}
+     run: |
+        printf '${{ env.PR_LABEL_LIST }}' > /tmp/label_list
+   - name: Bug step
+     if: ${{failure()}}
+     run: echo "I am a bug fix"
    - name: Sleep for 20 seconds
      run: sleep 20s
      shell: bash
