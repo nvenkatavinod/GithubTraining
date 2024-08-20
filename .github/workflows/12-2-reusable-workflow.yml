@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/12-1-reusable-workflows.yaml
+    uses: ./.github/workflows/12-1-reusable-workflows.yml
     with:
       target-directory: 'path/to/your/directory' # Replace with the actual path or value
 
